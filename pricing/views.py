@@ -2,8 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
-def hello(request):
-    return HttpResponse("<h1>Hola Mundo</h1>")
+def index(request):
+    return render(request, 'index.html')
 
-def about(request):
-    return HttpResponse("<p>Hello, Its me, can you hear me?</p>")
+def catalog(request):
+    catalog_type = request.GET.get('type', 'Todos los muebles')
+    print(catalog_type)
+    return render(request, 'catalog.html', {
+        "product_type": f'{catalog_type}'
+    })
