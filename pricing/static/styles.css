@@ -1,0 +1,41 @@
+
+.catalog-title {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.product-type-title {
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+.catalog-nav-col {
+    background-color: #222a;
+}
+
+.product-type-nav .nav-link {
+    border-radius: 0.5em 0.5em 0 0;
+    color: white;
+}
+
+.product-type-nav .nav-link:hover {
+    color: #aaa;
+}
+
+.catalog-row {
+    height: 100vh;
+    overflow-y: auto;
+    background-image: url('https://www.teahub.io/photos/full/223-2235753_black-geometric-wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.catalog-product-card {
+    background-color: #333;
+}
+
+.product-list-container {
+    background: rgb(108,117,125);
+background: linear-gradient(90deg, rgba(108,117,125,1) 0%, rgba(108,117,125,1) 0%, rgba(171,171,171,1) 100%);
+}
