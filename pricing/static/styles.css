@@ -1,3 +1,11 @@
+body {
+    background-color: black;
+}
+
+.pricing-index-container {
+    background-color: white;
+}
+
 
 .catalog-title {
     font-size: 2em;
@@ -10,32 +18,37 @@
 }
 
 .catalog-nav-col {
-    background-color: #222a;
+    /* background-color: #222a; */
 }
 
 .product-type-nav .nav-link {
-    border-radius: 0.5em 0.5em 0 0;
-    color: white;
+    border-radius: 0.5em;
+    color: #636363;
+}
+
+.product-type-nav > .nav-link + .active {
+    background-color: #424242 !important;
 }
 
 .product-type-nav .nav-link:hover {
-    color: #aaa;
+    color: #424242;
 }
 
 .catalog-row {
     height: 100vh;
     overflow-y: auto;
-    background-image: url('https://www.teahub.io/photos/full/223-2235753_black-geometric-wallpaper.jpg');
+    /* background-image: url('https://www.teahub.io/photos/full/223-2235753_black-geometric-wallpaper.jpg'); */
+    background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .catalog-product-card {
-    background-color: #333;
+    /* background-color: #967eee; */
 }
 
 .product-list-container {
-    background: rgb(108,117,125);
-background: linear-gradient(90deg, rgba(108,117,125,1) 0%, rgba(108,117,125,1) 0%, rgba(171,171,171,1) 100%);
+    background: rgb(255, 255, 255);
+    /* background: linear-gradient(90deg, rgba(108,117,125,1) 0%, rgba(108,117,125,1) 0%, rgba(171,171,171,1) 100%); */
 }

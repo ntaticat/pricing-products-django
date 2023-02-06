@@ -2,38 +2,40 @@
 
 {% block content %}
 
-<div class="row catalog-row">
+<div class="row align-content-start catalog-row">
+    {% comment %} Title and Navigation {% endcomment %}
     <div class="col-12">
         <div class="row mx-3">
             <div class="col-12">
-                <h1 class="text-center catalog-title p-2 mb-0"><span class="badge text-bg-danger">Tiendita de la esquina</span></h1>
+                <h1 class="text-center catalog-title p-2 mb-0"><span class="badge text-bg-light">Tiendita de la esquina</span></h1>
             </div>
             <div class="col-12 catalog-nav-col">
                 <ul class="nav nav-pills nav-fill product-type-nav mt-3">
                     <li class="nav-item px-3">
-                        <a class="nav-link {% if product_type == 'Todos los muebles' %}active{% endif %}" aria-current="page" href="./">Todos</a>
+                        <a class="nav-link {% if product_type == 'Todos los muebles' %}active disabled{% endif %}" aria-current="page" href="./">Todos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if product_type == 'sillas' %}active{% endif %}" href="?type=sillas">Sillas</a>
+                        <a class="nav-link {% if product_type == 'sillas' %}active disabled{% endif %}" href="?type=sillas">Sillas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if product_type == 'mesas' %}active{% endif %}" href="?type=mesas">Mesas</a>
+                        <a class="nav-link {% if product_type == 'mesas' %}active disabled{% endif %}" href="?type=mesas">Mesas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if product_type == 'comedores' %}active{% endif %}" href="?type=comedores">Comedores</a>
+                        <a class="nav-link {% if product_type == 'comedores' %}active disabled{% endif %}" href="?type=comedores">Comedores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if product_type == 'salas' %}active{% endif %}" href="?type=salas">Salas</a>
+                        <a class="nav-link {% if product_type == 'salas' %}active disabled{% endif %}" href="?type=salas">Salas</a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
+    {% comment %} Products {% endcomment %}
     <div class="col-12">
         <div class="row mx-3 product-list-container rounded mb-3">
             <div class="col-12">
                 <div class="catalog-info-container py-3 d-flex flex-wrap justify-content-center">
-                    <h2 class="text-light product-type-title w-100 text-center mb-3"># {{ product_type }}</h3>
+                    <h2 class="text-dark product-type-title w-100 text-center mb-3"># {{ product_type }}</h3>
                     <p class="w-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia doloribus excepturi odit ad, soluta obcaecati accusantium numquam recusandae sed, dolorum incidunt error inventore. Saepe esse voluptas dolores dolorem tempora iure.</p>
                 </div>
             </div>
@@ -41,7 +43,7 @@
                 <div class="row">
                     {% for product in products %}
                     <div class="col-4 mb-4">
-                        <div class="card catalog-product-card text-light">
+                        <div class="card catalog-product-card shadow">
                             <img src="{{ product.image }}"  class="card-img-top" alt="product image">
                             <div class="card-body">
                                 <p class="card-title">{{ product.name }}</p>
