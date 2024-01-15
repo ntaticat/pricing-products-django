@@ -12,7 +12,6 @@ def catalog(request):
     products = list(models.Product.objects.all())
     
     catalog_type = request.GET.get('type', 'Todos los muebles')
-    print(catalog_type)
     return render(request, 'catalog.html', {
         "product_type": f'{catalog_type}',
         "products": products
